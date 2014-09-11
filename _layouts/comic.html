@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="/css/common.css" media="screen">
+	<title>Doujinanigans</title>
+</head>
+<body>
+<header>
+<img src="/img/title.png">
+</header>
+<article>
+<nav>
+	<a href="{{ site.posts.last.url }}">&laquo;</a>
+	<a href="{{ page.previous.url }}">&lsaquo;</a>
+	<a href="#">&bull;</a>
+	<a href="{{ page.next.url }}">&rsaquo;</a>
+	<a href="{{ site.posts.first.url }}">&raquo;</a>
+</nav>
+<img id="comic" src="/comics/{{page.comic_path}}" width="600px">
+<nav>
+	<a href="{{ site.posts.last.url }}">&laquo;</a>
+	<a href="{{ page.previous.url }}">&lsaquo;</a>
+	<a href="#">&bull;</a>
+	<a href="{{ page.next.url }}">&rsaquo;</a>
+	<a href="{{ site.posts.first.url }}">&raquo;</a>
+</nav>
+{% if page.news %}
+<div id="news">{{content}}</div>
+{% endif %}
+</article>
+<footer>
+<nav>
+<a href="#">COMIC</a>
+&bull;
+<a href="#">ABOUT</a>
+&bull;
+<a href="#">CONTACT</a>
+&bull;
+<a href="#">NEW READERS</a>
+</nav>
+copyright 2014 &nbsp; | &nbsp; <a href="http://studio-cation.com">Studio Cation</a>
+</footer>
+</body>
+</html>
